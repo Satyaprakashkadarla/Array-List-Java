@@ -1,0 +1,12 @@
+Function reverseArray(arr):
+    Input: An array arr of n elements.
+    Output: An array containing the elements of arr in reverse order.
+
+    reversedArr := new Array of size n
+    j := n - 1
+    for i from 0 to n - 1 do:
+        reversedArr[j] := arr[i]
+        j := j - 1
+    return reversedArr
+
+This pseudocode iterates over the original array, assigning elements to the reversed array in reverse order. Finally, it returns the reversed array.

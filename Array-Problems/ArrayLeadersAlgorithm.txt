@@ -1,0 +1,40 @@
+The "leaders in an array" problem involves finding elements in an array that are greater than all elements to their right. In other words, a leader is an element that has no element greater than itself on its right side.
+
+Here's a simple algorithm to find the leaders in an array:
+
+1.Start from the rightmost element of the array and initialize the maximum element encountered so far as the rightmost element.
+
+2.Traverse the array from right to left.
+
+3.For each element encountered:
+a. If the current element is greater than the maximum element encountered so far, then:-
+
+i. Update the maximum element encountered so far to the current element.
+
+ii. Add the current element to the list of leaders.
+
+4.Finally, reverse the list of leaders (if needed) since we found them while traversing the array from right to left.
+
+
+Here is a Python implementation of the above algorithm:
+
+def find_leaders(arr):
+    n = len(arr)
+    leaders = []
+    max_right = arr[n - 1]  # Initialize the maximum element encountered so far
+
+    # Traverse the array from right to left
+    for i in range(n - 2, -1, -1):
+        if arr[i] > max_right:
+            max_right = arr[i]
+            leaders.append(max_right)
+
+    # Reverse the list of leaders to get them in correct order
+    leaders.reverse()
+    return leaders
+
+# Example usage:
+arr = [16, 17, 4, 3, 5, 2]
+print("Leaders in the array:", find_leaders(arr))
+
+/*This algorithm has a time complexity of O(n) since it only requires a single traversal of the array.

@@ -1,0 +1,29 @@
+here's the pseudocode for the algorithm to find leaders in an array:
+
+function findLeaders(arr):
+    n = length of arr
+    leaders = empty list
+    max_right = arr[n - 1]  // Initialize the maximum element encountered so far
+
+    // Traverse the array from right to left
+    for i from n - 2 to 0 with step -1:
+        if arr[i] > max_right then
+            max_right = arr[i]
+            leaders.append(max_right)
+
+    // Reverse the list of leaders to get them in correct order
+    reverse leaders
+    return leaders
+
+// Example usage:
+arr = [16, 17, 4, 3, 5, 2]
+print "Leaders in the array:", findLeaders(arr)
+
+
+This pseudocode represents the same algorithm as the Python code provided earlier. It traverses the array from right to left, keeping track of the maximum element encountered so far. If an element greater than the current maximum is found, it becomes a leader, and it is added to the list of leaders. Finally, the list of leaders is reversed to maintain the correct order of elements.
+
+
+
+
+
+

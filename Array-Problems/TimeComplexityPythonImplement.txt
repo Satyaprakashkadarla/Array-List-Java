@@ -1,0 +1,9 @@
+Time Complexity Of ArrayLeaderCode For: Python Implementation
+
+The time complexity of the provided find_leaders function is O(n), where n is the number of elements in the input array.
+
+Here's a breakdown of the time complexity:
+
+The loop that iterates over the array elements runs from n - 2 to 0 (inclusive) using a decrement of -1. This loop iterates over each element of the array once, making it O(n).
+Within the loop, each iteration involves simple comparisons and appending an element to the leaders list. These operations have constant time complexity.
+Since the dominant operation is the loop that iterates over the array elements, the overall time complexity of the algorithm is O(n). This means the time taken by the algorithm increases linearly with the size of the input array.

@@ -1,0 +1,16 @@
+Space Complexity Of ArrayLeaderCode: C Implementation
+
+The space complexity of the provided C implementation of the findLeaders function and its main function can be analyzed as follows:
+
+Inside the findLeaders function:
+
+An integer array leaders of size n is allocated dynamically using malloc. This array is used to store potential leader elements encountered during the traversal of the input array.
+Another integer array result is allocated dynamically using malloc. This array is used to store the actual leaders found. Its size depends on the number of leaders found, which is at most n.
+Therefore, the total space used inside the findLeaders function is proportional to 2n integers.
+Additionally, there are some constant space requirements for other variables like maxRight and count.
+Inside the main function:
+
+An integer array arr of size n is declared.
+A pointer leaders is declared to store the result returned by the findLeaders function.
+The space complexity of the main function is mainly determined by the space required for the arr array and the leaders pointer.
+Overall, the space complexity of the provided C implementation is O(n), where n is the number of elements in the input array. This means that the space used by the program increases linearly with the size of the input array.

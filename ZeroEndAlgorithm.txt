@@ -1,0 +1,30 @@
+
+One common algorithm to move zeros to the end of an array while maintaining the relative order of other elements is the "Two Pointers" approach. Here's how it works:
+
+1.Initialize two pointers, left and right, both pointing to the start of the array.
+
+2.Iterate through the array using the right pointer:
+*If the element at the right pointer is non-zero, swap it with the element at the left pointer, and increment both pointers.
+*If the element at the right pointer is zero, only increment the right pointer.
+
+3.Continue this process until the right pointer reaches the end of the array.
+
+Here's a Python implementation of this algorithm:
+
+def move_zeros_to_end(arr):
+    left = 0
+    right = 0
+
+    while right < len(arr):
+        if arr[right] != 0:
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1
+        right += 1
+
+    return arr
+
+# Example usage:
+arr = [0, 1, 0, 3, 12]
+print(move_zeros_to_end(arr))  # Output: [1, 3, 12, 0, 0]
+
+This algorithm has a time complexity of O(n) because it only requires a single pass through the array.

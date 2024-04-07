@@ -1,0 +1,26 @@
+Here's a more detailed algorithm for the "Stock Buy Sell" problem:
+
+Algorithm:
+
+1.Start from the first price and iterate through each subsequent price in the array.
+2.Keep track of the minimum price seen so far (minPrice) and the maximum profit (maxProfit).
+3.For each price, calculate the potential profit if the stock is sold at that price by subtracting the minPrice from the current price.
+4.If this potential profit is greater than the current maxProfit, update maxProfit accordingly.
+5.If the current price is lower than minPrice, update minPrice to the current price.
+6.After iterating through all prices, return maxProfit as the maximum profit that can be obtained by buying and selling a stock at most once.
+
+Here's the pseudocode corresponding to the algorithm:
+
+function maxProfit(prices):
+    minPrice = infinity
+    maxProfit = 0
+    for each price in prices:
+        // Check if the current price could result in a higher profit
+        if price - minPrice > maxProfit:
+            maxProfit = price - minPrice
+        // Update the minimum price seen so far
+        if price < minPrice:
+            minPrice = price
+    return maxProfit
+
+//This algorithm efficiently finds the maximum profit that can be obtained by buying and selling a stock at most once. It traverses the prices array only once, resulting in a time complexity of O(n), where n is the number of prices in the array

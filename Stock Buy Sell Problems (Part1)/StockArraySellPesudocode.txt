@@ -1,0 +1,19 @@
+Here's the pseudocode for the "Stock Buy Sell" problem:
+
+function maxProfit(prices):
+    minPrice = infinity
+    maxProfit = 0
+    for each price in prices:
+        if price < minPrice:
+            minPrice = price
+        else if price - minPrice > maxProfit:
+            maxProfit = price - minPrice
+    return maxProfit
+
+//This pseudocode outlines the steps needed to find the maximum profit that can be obtained by buying and selling a stock at most once. It iterates through the prices array, keeping track of the minimum price seen so far (minPrice) and the maximum profit (maxProfit). After iterating through all prices, it returns the maxProfit.
+
+
+
+
+
+

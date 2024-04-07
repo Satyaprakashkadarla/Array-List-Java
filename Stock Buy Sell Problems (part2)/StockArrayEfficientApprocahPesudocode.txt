@@ -1,0 +1,26 @@
+1.Identify Valleys and Peaks:
+Traverse the price array and identify consecutive valleys and peaks.
+A valley is a point where the price is lower than the previous and next prices.
+A peak is a point where the price is higher than the previous and next prices.
+
+2.Calculate Profit:
+
+For each valley and peak pair, calculate the profit by subtracting the valley price from the peak price.
+Sum up all the profits from different valley and peak pairs.
+
+3.Return Maximum Profit:
+
+The sum of profits obtained from different valley and peak pairs gives the maximum profit that can be obtained by buying and selling the stock.
+
+//Here's the pseudocode for the Valley Peak Approach:
+
+less
+Copy code
+function maxProfit(prices):
+    maxProfit = 0
+    for i from 1 to n-1:
+        if prices[i] > prices[i-1]:
+            maxProfit += prices[i] - prices[i-1]
+    return maxProfit
+
+In this approach, we don't need to worry about tracking individual valley and peak indices explicitly. Instead, we directly sum up the profits obtained by buying at each valley and selling at the corresponding peak. This results in a more straightforward and efficient solution.

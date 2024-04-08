@@ -1,0 +1,14 @@
+Here's the algorithm to find the maximum consecutive 1s in an array:
+
+1.Start
+2.Initialize variables maxCount and currentCount to 0.
+Loop through each element num in the array:
+a. If num is equal to 1:
+i. Increment currentCount.
+ii. Update maxCount to be the maximum of maxCount and currentCount.
+b. If num is not equal to 1:
+i. Reset currentCount to 0.
+4.Return maxCount.
+5.End.
+
+This algorithm iterates through each element in the array and keeps track of the current count of consecutive 1s (currentCount). If the current element is 1, it increments currentCount and updates maxCount if necessary. If the current element is not 1, it resets currentCount to 0. Finally, it returns maxCount, which represents the maximum consecutive 1s found in the array.

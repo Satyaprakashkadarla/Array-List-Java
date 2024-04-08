@@ -1,0 +1,20 @@
+function findMaxConsecutiveOnes(nums):
+    maxCount = 0
+    currentCount = 0
+    
+    for num in nums:
+        if num == 1:
+            currentCount = currentCount + 1
+            maxCount = max(maxCount, currentCount)
+        else:
+            currentCount = 0
+            
+    return maxCount
+
+This pseudocode outlines the steps to iterate through the array nums, maintaining the current count of consecutive 1s (currentCount) and updating the maximum count of consecutive 1s (maxCount). Finally, it returns maxCount.
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+Initialize:
+    max_sum = array[0]
+    current_sum = array[0]
+
+Loop over each element in the array starting from the second element:
+    current_sum = max(array[i], current_sum + array[i])
+    max_sum = max(max_sum, current_sum)
+
+Return max_sum

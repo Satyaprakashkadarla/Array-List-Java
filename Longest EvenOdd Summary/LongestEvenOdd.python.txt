@@ -1,0 +1,24 @@
+def longest_even_odd(arr):
+    # Initialize variables to keep track of maximum and current lengths
+    max_length = 1  # Initialize maxLength to 1 since any single element is a valid subarray
+    current_length = 1  # Initialize currentLength to 1 since the first element is considered as a subarray
+
+    # Iterate through the array starting from the second element
+    for i in range(1, len(arr)):
+        # Check if the current element and the previous element have different parities
+        if (arr[i] % 2 == 0 and arr[i - 1] % 2 != 0) or (arr[i] % 2 != 0 and arr[i - 1] % 2 == 0):
+            # If the condition is true, increment currentLength
+            current_length += 1
+            # Update maxLength if currentLength is greater
+            max_length = max(max_length, current_length)
+        else:
+            # If the condition is false, reset currentLength to 1
+            current_length = 1
+
+    # Return the maximum length found
+    return max_length
+
+# Example usage:
+arr = [10, 12, 14, 7, 8, 9, 13, 12, 15, 16]
+longest_length = longest_even_odd(arr)
+print("Length of the longest even-odd subarray:", longest_length)

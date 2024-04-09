@@ -1,0 +1,12 @@
+Function longest_even_odd(arr):
+    max_length = 1
+    current_length = 1
+    
+    for i from 1 to length(arr) - 1 do:
+        if (arr[i] is even and arr[i - 1] is odd) or (arr[i] is odd and arr[i - 1] is even) then:
+            current_length = current_length + 1
+            max_length = max(max_length, current_length)
+        else:
+            current_length = 1
+    
+    return max_length

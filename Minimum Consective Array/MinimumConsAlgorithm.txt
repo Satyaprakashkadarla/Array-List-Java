@@ -1,0 +1,7 @@
+Algorithm:
+
+1.Initialize a variable flipCount to track the number of flips required.
+2.Initialize current to the first element of the array.
+3.Traverse through the array:
+If the current element is different from current, it means a flip is needed. Increment flipCount and update current to the current element.
+4.At the end of the traversal, flipCount will represent the minimum number of consecutive flips required.

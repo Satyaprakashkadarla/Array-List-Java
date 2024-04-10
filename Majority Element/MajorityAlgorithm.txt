@@ -1,0 +1,20 @@
+Boyer-Moore Voting Algorithm:
+1.Initialization: Start with two variables, candidate and count. Initialize candidate to any value and count to 0.
+
+2.Traverse the array: Iterate through the array, and for each element:
+If count is 0, set the current element as candidate and increment count.
+If the current element is equal to candidate, increment count.
+If the current element is different from candidate, decrement count.
+
+3.Verification: After the first pass, candidate will hold the potential majority element. We need to verify whether it is actually the majority element by counting its occurrences in the array.
+
+4.Final Verification: Run through the array again and count the occurrences of candidate. If it occurs more than n/2 times, then candidate is the majority element. Otherwise, there is no majority element.
+
+
+Complexity Analysis:
+
+Time Complexity: O(n) - The algorithm makes two passes through the array.
+
+Space Complexity: O(1) - The algorithm uses only a constant amount of extra space.
+
+This algorithm is efficient and widely used for finding the majority element in an array.

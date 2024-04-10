@@ -1,0 +1,16 @@
+Function minConsecutiveFlips(array):
+    flipCount = 0
+    current = array[0]
+    
+    for i from 1 to n-1:
+        if array[i] != current:
+            flipCount++
+            current = array[i]
+    
+    return flipCount
+
+
+Complexity Analysis:
+
+Time Complexity: O(n) - The algorithm traverses through the array once.
+Space Complexity: O(1) - The algorithm uses only a constant amount of extra space.

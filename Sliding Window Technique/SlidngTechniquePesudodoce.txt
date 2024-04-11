@@ -1,0 +1,17 @@
+// Initialize window start and end pointers
+start = 0
+end = 0
+
+// Iterate through the array or string
+while (end < length of array or string):
+    // Expand the window to the right
+    expandWindow()
+
+    // Check if the window meets the condition
+    if (window meets condition):
+        // Update the result or perform some action
+
+    // Shrink the window from the left
+    shrinkWindow()
+
+// Return the result

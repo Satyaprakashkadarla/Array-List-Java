@@ -1,0 +1,14 @@
+Algorithm:
+
+1.Initialize two pointers, start and end, and set them both to the beginning of the array.
+
+2.Initialize a variable currentSum to 0.
+
+3.Iterate through the array:
+a. Add the value at the current end pointer to currentSum.
+b. If currentSum is greater than the given sum:
+i. Increment start pointer and subtract the value at the new start position from currentSum.
+c. If currentSum is equal to the given sum, return the subarray between start and end.
+d. Increment end pointer.
+
+4.If no subarray is found, return "Subarray not found".

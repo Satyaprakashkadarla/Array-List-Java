@@ -1,0 +1,17 @@
+Function findSubarrayWithGivenSum(array, givenSum):
+    start = 0
+    end = 0
+    currentSum = array[0]
+
+    while end < length(array):
+        if currentSum == givenSum:
+            return subarray from start to end
+        else if currentSum < givenSum:
+            end = end + 1
+            if end < length(array):
+                currentSum = currentSum + array[end]
+        else:
+            currentSum = currentSum - array[start]
+            start = start + 1
+
+    return "Subarray not found"

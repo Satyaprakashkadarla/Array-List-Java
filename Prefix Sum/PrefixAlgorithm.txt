@@ -1,0 +1,52 @@
+The prefix sum algorithm is used to efficiently calculate the sum of elements within a range in an array. It precomputes the prefix sum of the array, which represents the cumulative sum of elements up to each index. Here's how it works:
+
+Preprocessing: Iterate through the array and compute the prefix sum up to each index. Store these prefix sums in a separate array.
+
+Querying: To find the sum of elements within a range [l, r], you can directly use the prefix sums. The sum of elements within the range [l, r] is equal to prefixSum[r] - prefixSum[l-1].
+
+Here's a simple implementation of the prefix sum algorithm in C++:
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> calculatePrefixSum(const vector<int>& array) {
+    int n = array.size();
+    vector<int> prefixSum(n);
+
+    // Compute prefix sum
+    prefixSum[0] = array[0];
+    for (int i = 1; i < n; ++i) {
+        prefixSum[i] = prefixSum[i - 1] + array[i];
+    }
+
+    return prefixSum;
+}
+
+int getSumInRange(const vector<int>& prefixSum, int l, int r) {
+    if (l == 0) {
+        return prefixSum[r];
+    } else {
+        return prefixSum[r] - prefixSum[l - 1];
+    }
+}
+
+int main() {
+    vector<int> array = {1, 2, 3, 4, 5};
+    vector<int> prefixSum = calculatePrefixSum(array);
+
+    // Query: sum of elements from index 1 to 3 (inclusive)
+    int l = 1, r = 3;
+    cout << "Sum from index " << l << " to " << r << " is: " << getSumInRange(prefixSum, l, r) << endl;
+
+    return 0;
+}
+
+//In this implementation, calculatePrefixSum computes the prefix sum of the given array, and getSumInRange returns the sum of elements within a given range using the prefix sum array.
+
+
+
+
+
+

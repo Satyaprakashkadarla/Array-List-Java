@@ -1,0 +1,29 @@
+Here's the pseudocode for the prefix sum algorithm:
+
+Function calculatePrefixSum(array):
+    Let n be the size of the array
+    Create an array prefixSum of size n
+
+    // Compute prefix sum
+    prefixSum[0] = array[0]
+    for i = 1 to n-1 do
+        prefixSum[i] = prefixSum[i - 1] + array[i]
+
+    return prefixSum
+
+Function getSumInRange(prefixSum, l, r):
+    if l == 0 then
+        return prefixSum[r]
+    else
+        return prefixSum[r] - prefixSum[l - 1]
+
+// Example usage:
+array = [1, 2, 3, 4, 5]
+prefixSum = calculatePrefixSum(array)
+
+// Query: sum of elements from index 1 to 3 (inclusive)
+l = 1
+r = 3
+print("Sum from index", l, "to", r, "is:", getSumInRange(prefixSum, l, r))
+
+//This pseudocode outlines the two main functions: calculatePrefixSum, which computes the prefix sum array, and getSumInRange, which returns the sum of elements within a given range using the prefix sum array.

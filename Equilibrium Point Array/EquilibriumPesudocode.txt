@@ -1,0 +1,18 @@
+equilibrium_points(arr):
+    n = length of arr
+    if n == 0:
+        return empty list
+
+    total_sum = sum of all elements in arr
+    left_sum = 0
+    equilibrium_points = empty list
+
+    for i from 0 to n-1:
+        total_sum = total_sum - arr[i]
+
+        if left_sum == total_sum:
+            add i to equilibrium_points
+
+        left_sum = left_sum + arr[i]
+
+    return equilibrium_points

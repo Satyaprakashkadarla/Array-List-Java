@@ -1,0 +1,57 @@
+The equilibrium point array algorithm is a solution for finding the equilibrium index (or indices) in an array. An equilibrium index is an index such that the sum of elements at lower indices is equal to the sum of elements at higher indices in the array.
+
+Here's a simple explanation of the algorithm:
+
+1.Start with an array of integers.
+2.Iterate through each element in the array.
+3.At each iteration, calculate the total sum of all elements in the array.
+4.For each element, check if the sum of elements to its left equals the sum of elements to its right.
+5.If the sums are equal, that element is an equilibrium point.
+6.Return all equilibrium points found in the array.
+
+
+def equilibrium_points(arr):
+    n = len(arr)
+    if n == 0:
+        return []
+
+    total_sum = sum(arr)
+    left_sum = 0
+    equilibrium_points = []
+
+    for i in range(n):
+        total_sum -= arr[i]
+
+        if left_sum == total_sum:
+            equilibrium_points.append(i)
+
+        left_sum += arr[i]
+
+    return equilibrium_points
+
+# Example usage:
+arr = [-7, 1, 5, 2, -4, 3, 0]
+print("Equilibrium points:", equilibrium_points(arr))
+def equilibrium_points(arr):
+    n = len(arr)
+    if n == 0:
+        return []
+
+    total_sum = sum(arr)
+    left_sum = 0
+    equilibrium_points = []
+
+    for i in range(n):
+        total_sum -= arr[i]
+
+        if left_sum == total_sum:
+            equilibrium_points.append(i)
+
+        left_sum += arr[i]
+
+    return equilibrium_points
+
+# Example usage:
+arr = [-7, 1, 5, 2, -4, 3, 0]
+print("Equilibrium points:", equilibrium_points(arr))
+v

@@ -1,0 +1,14 @@
+max_appearing_element(intervals):
+    Initialize an array count of size 1000000 with all elements set to 0
+    Iterate through each interval in intervals:
+        Increment count[start] by 1
+        Decrement count[end] by 1
+    Initialize max_count to 0
+    Initialize max_element to 0
+    Initialize current_count to 0
+    Iterate through each element in count:
+        Add count[i] to current_count
+        If current_count is greater than max_count:
+            Set max_count to current_count
+            Set max_element to i
+    Return max_element

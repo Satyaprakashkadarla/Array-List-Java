@@ -1,0 +1,34 @@
+1.Bitwise AND (&): This operator performs a bitwise AND operation between the corresponding bits of two operands. The result is 1 only if both bits are 1, otherwise, it's 0.
+
+int result = operand1 & operand2;
+
+2.Bitwise OR (|): This operator performs a bitwise OR operation between the corresponding bits of two operands. The result is 1 if either of the bits is 1, otherwise, it's 0.
+
+int result = operand1 | operand2;
+
+
+3.Bitwise XOR (^): This operator performs a bitwise XOR (exclusive OR) operation between the corresponding bits of two operands. The result is 1 if the bits are different, otherwise, it's 0.
+
+int result = operand1 ^ operand2;
+
+
+4.Bitwise NOT (~): This operator performs a bitwise NOT operation on each bit of the operand, flipping 1s to 0s and vice versa.
+
+int result = ~operand;
+
+
+5.Left Shift (<<): This operator shifts the bits of the first operand to the left by a number of positions specified by the second operand. The vacant bits are filled with zeros.
+
+int result = operand << numBits;
+
+
+6.Right Shift (>>): This operator shifts the bits of the first operand to the right by a number of positions specified by the second operand. The vacant bits are filled based on the sign bit for signed types (arithmetic right shift).
+
+int result = operand >> numBits;
+
+
+7.Unsigned Right Shift (>>>): This operator shifts the bits of the first operand to the right by a number of positions specified by the second operand. The vacant bits are filled with zeros, irrespective of the sign bit.
+
+int result = operand >>> numBits;
+
+These operators are widely used in scenarios like setting and clearing specific bits, extracting bits, implementing efficient algorithms, and more. They are particularly useful in competitive programming and in scenarios where performance optimization is critical. Understanding and mastering bitwise operators can significantly enhance your skills in data structures and algorithms.

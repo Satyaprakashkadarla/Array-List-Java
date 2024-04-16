@@ -1,0 +1,21 @@
+Representing negative numbers in binary is commonly done using Two's Complement notation. In Two's Complement:
+
+1.For positive numbers, the representation remains the same as regular binary.
+
+2.For negative numbers, you first represent the absolute value in binary, then flip all the bits (0s to 1s and 1s to 0s), and finally add 1 to the result.
+
+int x = -5;
+unsigned int y = *(unsigned int*) &x;
+printf("%u\n", y); // This will print the unsigned binary representation of -5
+
+In this code:
+
+We cast the integer x as an unsigned integer pointer and dereference it, effectively interpreting the bits of -5 as if it were an unsigned integer.
+Then we print the unsigned integer y, which effectively prints the binary representation of -5.
+Remember, though, the representation of negative numbers in binary can vary depending on the number of bits being used.
+
+
+
+
+
+

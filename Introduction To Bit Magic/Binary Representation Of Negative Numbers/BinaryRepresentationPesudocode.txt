@@ -1,0 +1,44 @@
+function twosComplementBinary(number, bits):
+    if number >= 0:
+        binary = convertToBinary(number, bits)
+    else:
+        // Convert the absolute value of the number to binary
+        positive_binary = convertToBinary(abs(number), bits)
+        
+        // Flip all the bits
+        flipped_bits = bitwiseComplement(positive_binary)
+        
+        // Add 1 to the result
+        incremented_binary = binaryAddition(flipped_bits, '1', bits)
+        
+        binary = incremented_binary
+        
+    return binary
+
+function convertToBinary(number, bits):
+    binary = empty string of length bits
+    while number > 0:
+        remainder = number % 2
+        prepend remainder to binary
+        number = number // 2
+    while length of binary is less than bits:
+        prepend '0' to binary
+    return binary
+
+function bitwiseComplement(binary):
+    complemented_binary = empty string of length binary.length
+    for each bit in binary:
+        if bit is '0':
+            append '1' to complemented_binary
+        else:
+            append '0' to complemented_binary
+    return complemented_binary
+
+function binaryAddition(binary1, binary2, bits):
+    result = empty string of length bits
+    carry = 0
+    for i from bits-1 to 0:
+        sum = binary1[i] + binary2[i] + carry
+        result[i] = sum % 2
+        carry = sum / 2
+    return result

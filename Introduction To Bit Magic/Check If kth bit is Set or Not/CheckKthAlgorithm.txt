@@ -1,0 +1,12 @@
+FUNCTION is_kth_bit_set(n, k):
+    // Left shift 1 by k positions to create a mask
+    mask = 1 << k
+    // Perform bitwise AND between mask and n
+    result = n & mask
+    // If the result is non-zero, then k-th bit is set
+    IF result != 0 THEN
+        RETURN TRUE
+    ELSE
+        RETURN FALSE
+    ENDIF
+END FUNCTION

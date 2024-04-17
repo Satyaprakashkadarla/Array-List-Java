@@ -1,0 +1,12 @@
+FUNCTION isKthBitSet(n, k):
+    // Create a mask with only the k-th bit set
+    mask = 1 << k
+    // Perform a bitwise AND operation between the mask and the number n
+    result = n & mask
+    // If the result is non-zero, then the k-th bit is set
+    IF result != 0 THEN
+        RETURN TRUE
+    ELSE
+        RETURN FALSE
+    ENDIF
+END FUNCTION

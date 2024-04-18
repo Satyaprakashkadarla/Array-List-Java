@@ -1,0 +1,7 @@
+function countSetBits(n):
+    count = 0
+    while n is not zero:
+        n = n AND (n - 1) // This clears the rightmost set bit
+        count = count + 1
+    return count
+This pseudocode outlines the steps of the algorithm in a more abstract way, suitable for understanding its logic without being tied to any specific programming language syntax

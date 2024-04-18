@@ -1,0 +1,18 @@
+Counting set bits (or population count) in a binary representation is a common problem in computer science. There are various algorithms to perform this task efficiently, often termed as "Bit Manipulation" or "Bit Magic." One of the most popular algorithms is the Brian Kernighan's Algorithm. 
+Here's how it works:
+def count_set_bits(n):
+    count = 0
+    while n:
+        n &= (n - 1)
+        count += 1
+    return count
+Let's break down what's happening in this algorithm:
+
+Start with a variable count initialized to 0.
+Loop through each bit of the number n until n becomes 0.
+In each iteration, perform n & (n - 1). This operation flips the rightmost set bit to 0. For example, if n is 10110, n - 1 will be 10101, and n & (n - 1) will be 10100, effectively removing the rightmost set bit.
+Increment count by 1.
+Repeat steps 2-4 until n becomes 0.
+Return the final count, which represents the number of set bits in the original number.
+This algorithm is very efficient as it only iterates through the number of set bits, rather than the total number of bits in the number. Its time complexity is O(log n), where n is the number of bits in the binary representation of the number.
+This algorithm is very efficient as it only iterates through the number of set bits, rather than the total number of bits in the number. Its time complexity is O(log n), where n is the number of bits in the binary representation of the number.

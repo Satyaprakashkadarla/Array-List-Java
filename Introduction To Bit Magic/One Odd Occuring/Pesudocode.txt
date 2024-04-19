@@ -1,0 +1,5 @@
+function findSingleElement(nums):
+    result = 0
+    for each num in nums:
+        result = result XOR num
+    return result

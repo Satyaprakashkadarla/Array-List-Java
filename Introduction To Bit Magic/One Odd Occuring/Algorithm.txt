@@ -1,0 +1,16 @@
+Initialize a variable result to 0.
+Iterate through each element in the array.
+For each element, perform an XOR operation with result.
+Return the value of result after all iterations.
+Explanation:
+
+Since XOR of a number with itself is 0, and XOR of a number with 0 is the number itself, all paired elements will cancel each other out leaving only the single element which occurs once.
+def find_single_element(nums):
+    result = 0
+    for num in nums:
+        result ^= num
+    return result
+
+# Example usage:
+arr = [4, 3, 6, 2, 2, 3, 4]
+print(find_single_element(arr))  # Output: 6

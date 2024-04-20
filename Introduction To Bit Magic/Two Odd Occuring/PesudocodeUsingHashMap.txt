@@ -1,0 +1,8 @@
+1. Create an empty hash map count_map.
+2. Iterate through the elements in the array:
+   a. If the element is already in count_map, increment its count.
+   b. If the element is not in count_map, add it to count_map with count 1.
+3. Create an empty list result.
+4. Iterate through the key-value pairs in count_map:
+   a. If the count of the element is odd, append the element to result.
+5. Return the list result.

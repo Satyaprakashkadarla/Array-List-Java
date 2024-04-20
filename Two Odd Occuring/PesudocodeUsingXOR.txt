@@ -1,0 +1,4 @@
+1. Initialize a variable result to 0.
+2. Iterate through the elements in the array:
+   a. Take the bitwise XOR of result and the current element.
+3. Return the value of result.

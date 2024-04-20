@@ -1,0 +1,30 @@
+///Using Hash Map
+def find_odd_occurrences(arr):
+    count_map = {}
+    for num in arr:
+        if num in count_map:
+            count_map[num] += 1
+        else:
+            count_map[num] = 1
+    
+    result = []
+    for key, value in count_map.items():
+        if value % 2 != 0:
+            result.append(key)
+    
+    return result
+
+# Example usage:
+arr = [4, 3, 2, 4, 1, 3, 2, 1, 4, 4]
+print(find_odd_occurrences(arr))  # Output: [4]
+'''Using XOR'''
+def find_odd_occurrences_xor(arr):
+    result = 0
+    for num in arr:
+        result ^= num
+    
+    return result
+
+# Example usage:
+arr = [4, 3, 2, 4, 1, 3, 2, 1, 4, 4]
+print(find_odd_occurrences_xor(arr))  # Output: 4

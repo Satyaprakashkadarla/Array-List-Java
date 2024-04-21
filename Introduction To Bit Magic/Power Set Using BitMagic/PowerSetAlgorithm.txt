@@ -1,0 +1,13 @@
+function powerSet(str) {
+  const results = [];
+  for (let i = 0; i < 1 << str.length; i++) {
+    let subset = "";
+    for (let j = 0; j < str.length; j++) {
+      if (i >> j & 1) {
+        subset += str[j];
+      }
+    }
+    results.push(subset);
+  }
+  return results;
+}

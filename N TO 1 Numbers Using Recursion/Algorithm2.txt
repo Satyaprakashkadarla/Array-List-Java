@@ -1,0 +1,10 @@
+def print_numbers(n):
+    if n == 0:
+        return
+    else:
+        print(n)
+        print_numbers(n - 1)
+
+# Example usage:
+print_numbers(5)
+This algorithm prints numbers from n down to 1 recursively. It starts by checking if n is equal to 0, in which case it returns without printing anything. Otherwise, it prints the current value of n, then calls itself recursively with n-1, continuing until n reaches 0.

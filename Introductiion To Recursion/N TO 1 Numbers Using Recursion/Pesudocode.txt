@@ -1,0 +1,7 @@
+Procedure PrintNumbers(n)
+    If n is greater than 0 then
+        Output n
+        Call PrintNumbers(n - 1)
+    End If
+End Procedure
+This pseudocode defines a procedure PrintNumbers that takes an integer n as input. It checks if n is greater than 0. If n is greater than 0, it prints the value of n, then calls itself recursively with n-1. This process continues until n becomes 0 or negative, at which point the recursion stops.

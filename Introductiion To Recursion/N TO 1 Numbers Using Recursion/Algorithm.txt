@@ -1,0 +1,6 @@
+Function PrintNumbers(n):
+    If n is equal to 0:
+        Return
+    Else:
+        Print n
+        Call PrintNumbers(n - 1)

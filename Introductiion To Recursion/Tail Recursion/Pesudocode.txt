@@ -1,0 +1,15 @@
+function tailRecursiveFactorial(n, acc)
+    if n == 0 then
+        return acc
+    else
+        return tailRecursiveFactorial(n - 1, acc * n)
+
+# Example usage
+result = tailRecursiveFactorial(5, 1)
+In this pseudocode:
+
+n represents the number for which we want to calculate the factorial.
+acc represents the accumulator, which keeps track of the partial result of the factorial calculation.
+We start with acc initialized to 1, as the factorial of 0 is 1.
+The function calls itself recursively with n-1 and acc * n until n reaches 0.
+When n becomes 0, the function returns the accumulated result.

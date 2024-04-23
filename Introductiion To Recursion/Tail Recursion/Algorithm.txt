@@ -1,0 +1,21 @@
+Tail recursion is a special form of recursion where the recursive call is the last operation performed by the function. In other words, the recursive call is the final statement in the function's execution path. This has a significant implication: it allows some programming languages and compilers to optimize the recursion by reusing the current function's stack frame for the next recursive call, rather than creating a new stack frame for each call. This optimization is known as "tail call optimization" (TCO).
+
+Here's an example of a tail-recursive algorithm to calculate the factorial of a number
+def factorial(n, acc=1):
+    if n == 0:
+        return acc
+    else:
+        return factorial(n-1, acc*n)
+
+# Example usage
+result = factorial(5)
+print(result)  # Output: 120
+In this example, acc is an accumulator that keeps track of the partial result of the factorial calculation. The function factorial is tail-recursive because the recursive call factorial(n-1, acc*n) is the last operation before returning. This allows compilers that support TCO to optimize the recursion by reusing the current stack frame.
+
+It's important to note that not all programming languages and compilers support tail call optimization. In languages like Python, tail recursion is not directly optimized by the interpreter, so using tail recursion may still lead to stack overflow errors for large inputs. However, languages like Scheme and Haskell often optimize tail calls.
+
+
+
+
+
+

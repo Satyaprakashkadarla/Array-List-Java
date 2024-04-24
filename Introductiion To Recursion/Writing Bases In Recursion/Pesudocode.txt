@@ -1,0 +1,7 @@
+function factorial(n):
+    // Base case: if n is 0 or 1, return 1
+    if n equals 0 or n equals 1:
+        return 1
+    // Recursive case: if n is greater than 1, calculate factorial recursively
+    else:
+        return n * factorial(n - 1)

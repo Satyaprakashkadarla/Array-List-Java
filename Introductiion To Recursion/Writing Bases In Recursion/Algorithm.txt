@@ -1,0 +1,6 @@
+1. Define the recursive function with input parameters.
+2. Check for base cases:
+   a. If the input satisfies the termination condition, return a known value.
+3. If the base cases are not met, perform the recursive step:
+   a. Modify the input parameters and call the recursive function again.
+4. Return the result of the recursive step.

@@ -1,0 +1,5 @@
+function sum_of_natural_numbers(n):
+    if n <= 0:
+        return 0   // Base case: if n is less than or equal to 0, return 0
+    else:
+        return n + sum_of_natural_numbers(n - 1)   // Recursively call the function with n-1 and add n to the result

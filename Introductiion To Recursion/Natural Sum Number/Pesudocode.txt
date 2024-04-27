@@ -1,0 +1,10 @@
+function sum_of_natural_numbers(n):
+    if n <= 1:
+        return n
+    else:
+        return n + sum_of_natural_numbers(n - 1)
+
+# Example usage:
+number = 5
+result = sum_of_natural_numbers(number)
+print "The sum of natural numbers up to", number, "is:", result

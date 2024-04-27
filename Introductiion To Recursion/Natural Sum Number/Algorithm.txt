@@ -1,0 +1,14 @@
+Algorithm: sum_of_natural_numbers(n)
+Input: An integer n
+Output: The sum of natural numbers from 1 to n
+
+1. if n is less than or equal to 1, return n.
+2. Otherwise,
+   a. Calculate the sum of natural numbers from 1 to n-1 recursively.
+   b. Add n to the sum obtained from step 2a.
+   c. Return the sum.
+
+Example Usage:
+number = 5
+result = sum_of_natural_numbers(number)
+Print "The sum of natural numbers up to", number, "is:", result

@@ -1,0 +1,29 @@
+function isPalindrome(str):
+    // Convert the string to lowercase to ignore case
+    str = toLowercase(str)
+    // Initialize start and end pointers
+    start = 0
+    end = length(str) - 1
+    
+    // Loop until start is less than end
+    while start < end:
+        // Ignore non-alphanumeric characters by skipping them
+        while not isAlphanumeric(str[start]) and start < end:
+            start = start + 1
+        while not isAlphanumeric(str[end]) and start < end:
+            end = end - 1
+        
+        // Compare characters at start and end
+        if str[start] != str[end]:
+            return False
+        
+        // Move pointers
+        start = start + 1
+        end = end - 1
+    
+    // If the loop completes, the string is a palindrome
+    return True
+
+// Test the function
+print(isPalindrome("A man, a plan, a canal, Panama"))  // Output: True
+print(isPalindrome("race a car"))  // Output: False

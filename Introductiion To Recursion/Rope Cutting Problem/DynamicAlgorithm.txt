@@ -1,0 +1,8 @@
+DynamicRopeCut(ropelength, desiredLengths):
+    Initialize an array minCuts of size ropelength + 1 and fill it with infinity
+    minCuts[0] = 0
+    for i from 1 to ropelength:
+        for length in desiredLengths:
+            if i - length >= 0:
+                minCuts[i] = min(minCuts[i], minCuts[i - length] + 1)
+    return minCuts[ropelength]

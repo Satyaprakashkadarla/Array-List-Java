@@ -1,0 +1,16 @@
+function dynamicRopeCut(ropelength, desiredLengths):
+    // Initialize an array to store minimum cuts for each length
+    minCuts = array of size (ropelength + 1) initialized with infinity
+    minCuts[0] = 0
+
+    // Iterate through rope lengths
+    for i from 1 to ropelength:
+        // Iterate through desired lengths
+        for each length in desiredLengths:
+            // Check if the current length can be cut from the rope
+            if i >= length:
+                // Update the minimum cuts for the current length
+                minCuts[i] = min(minCuts[i], minCuts[i - length] + 1)
+
+    // Return the minimum cuts needed for the entire rope length
+    return minCuts[ropelength]

@@ -1,0 +1,19 @@
+function greedyRopeCut(ropelength, desiredLengths):
+    // Sort desiredLengths in descending order
+    sort(desiredLengths, descending order)
+
+    // Initialize variables
+    cuts = 0
+    remainingLength = ropelength
+
+    // Iterate through desired lengths
+    for each length in desiredLengths:
+        // Check if remaining length is greater than or equal to desired length
+        while remainingLength >= length:
+            // Cut the rope at the desired length
+            remainingLength -= length
+            // Increment cuts counter
+            cuts++
+
+    // Return the total number of cuts
+    return cuts

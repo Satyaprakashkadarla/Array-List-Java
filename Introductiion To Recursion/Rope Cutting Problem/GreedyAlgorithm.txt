@@ -1,0 +1,9 @@
+GreedyRopeCut(ropelength, desiredLengths):
+    Sort desiredLengths in descending order
+    cuts = 0
+    remainingLength = ropelength
+    for length in desiredLengths:
+        while remainingLength >= length:
+            remainingLength -= length
+            cuts++
+    return cuts

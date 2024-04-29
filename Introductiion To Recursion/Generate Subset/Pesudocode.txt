@@ -1,0 +1,8 @@
+procedure generateSubsets(set):
+    n = length(set)
+    for i from 0 to 2^n - 1:
+        subset = []
+        for j from 0 to n - 1:
+            if (i bit-wise AND (1 << j)) != 0:
+                add set[j] to subset
+        output subset

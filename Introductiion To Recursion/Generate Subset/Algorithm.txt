@@ -1,0 +1,18 @@
+def generate_subsets(nums):
+    subsets = []
+    
+    def backtrack(start, subset):
+        subsets.append(subset[:])  # Add a copy of the current subset to the list of subsets
+        
+        # Iterate through the elements starting from 'start' index
+        for i in range(start, len(nums)):
+            subset.append(nums[i])  # Include the current element in the subset
+            backtrack(i + 1, subset)  # Recur with the next index and the updated subset
+            subset.pop()  # Backtrack: remove the current element from the subset
+    
+    backtrack(0, [])  # Start backtracking from index 0 with an empty subset
+    return subsets
+
+# Example usage:
+nums = [1, 2, 3]
+print(generate_subsets(nums))

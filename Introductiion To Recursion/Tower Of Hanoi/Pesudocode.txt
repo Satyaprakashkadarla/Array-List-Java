@@ -1,0 +1,7 @@
+TowerOfHanoi(n, source, auxiliary, destination):
+    if n == 1:
+        move disk from source to destination
+    else:
+        TowerOfHanoi(n-1, source, destination, auxiliary)
+        move disk from source to destination
+        TowerOfHanoi(n-1, auxiliary, source, destination)

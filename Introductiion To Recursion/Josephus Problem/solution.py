@@ -1,0 +1,14 @@
+def josephus(n, k):
+    if n == 1:           # Base case: If there's only one person left
+        return 0         # That person will be at position 0
+    else:
+        # Recursive case: Calculate the position of the survivor in the current circle
+        previous_survivor_position = josephus(n - 1, k)   # Position of survivor in circle with n-1 people
+        next_survivor_position = (previous_survivor_position + k) % n  # Position of survivor in current circle
+        return next_survivor_position
+
+# Example usage
+n = 7  # number of people
+k = 3  # every 3rd person is eliminated
+position = josephus(n, k)
+print("The last person remaining is at position:", position + 1)

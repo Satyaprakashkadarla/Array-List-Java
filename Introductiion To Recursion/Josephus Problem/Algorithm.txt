@@ -1,0 +1,28 @@
+The Josephus problem is a theoretical problem with various applications in computer science and mathematics. It goes like this:
+
+Suppose there are n people standing in a circle and a decision is made to eliminate every k-th person from the circle, going around clockwise, until only one person remains. The task is to find out the position of the last person remaining.
+def josephus(n, k):
+    if n == 1:
+        return 0
+    else:
+        return (josephus(n - 1, k) + k) % n
+
+# Example usage
+n = 7  # number of people
+k = 3  # every 3rd person is eliminated
+position = josephus(n, k)
+print("The last person remaining is at position:", position + 1)
+In this algorithm, n represents the number of people initially standing in the circle, and k represents the count of people to be skipped before eliminating the next person. The function josephus(n, k) returns the position of the last person remaining after the elimination process.
+
+The formula (josephus(n - 1, k) + k) % n is used to compute the position of the survivor based on the positions of the survivors in smaller circles.
+
+Here's how it works:
+
+If there's only one person left (n == 1), that person will be at position 0 (indexing starting from 0).
+Otherwise, the position of the survivor in the current circle can be calculated by adding k to the position of the survivor in the circle with n-1 people, then taking modulo n.
+This algorithm has a time complexity of O(n), where n is the number of people in the circle.
+
+
+
+
+

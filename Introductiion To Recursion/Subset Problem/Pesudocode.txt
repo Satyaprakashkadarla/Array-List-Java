@@ -1,0 +1,23 @@
+Function subset_sum(nums, target):
+    n = length of nums
+    Create a 2D array dp of size (n+1) x (target+1)
+    
+    // Base case: if the target is 0, then there's always a subset (empty set) that sums up to 0
+    for i from 0 to n:
+        dp[i][0] = true
+    
+    // Build up the solution table
+    for i from 1 to n:
+        for j from 1 to target:
+            if nums[i-1] > j:
+                // If the current number is greater than the current target sum,
+                // then it cannot be included in the subset
+                dp[i][j] = dp[i-1][j]
+            else:
+                // Otherwise, there are two possibilities:
+                // 1. Include the current number in the subset.
+                // 2. Exclude the current number from the subset.
+                dp[i][j] = dp[i-1][j] or dp[i-1][j - nums[i-1]]
+    
+    // The solution to the problem is in the bottom-right cell of the table
+    return dp[n][target]

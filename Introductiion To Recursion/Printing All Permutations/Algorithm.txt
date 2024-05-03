@@ -1,0 +1,15 @@
+def permutations(string, current=""):
+    # If the string is empty, print the current permutation
+    if len(string) == 0:
+        print(current)
+    else:
+        for i in range(len(string)):
+            # Form a new string excluding the ith character
+            new_string = string[:i] + string[i + 1:]
+            # Add the ith character to the current permutation
+            permutations(new_string, current + string[i])
+
+# Example usage:
+input_string = "abc"
+print("Permutations of '{}' are:".format(input_string))
+permutations(input_string)

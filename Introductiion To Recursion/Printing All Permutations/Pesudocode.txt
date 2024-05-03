@@ -1,0 +1,11 @@
+procedure permutations(string, current):
+    if length(string) == 0 then
+        print current
+    else
+        for i from 0 to length(string) - 1 do
+            new_string = string[0:i] + string[i + 1:length(string)]
+            permutations(new_string, current + string[i])
+
+input_string = "abc"
+print("Permutations of '{}' are:".format(input_string))
+permutations(input_string, "")

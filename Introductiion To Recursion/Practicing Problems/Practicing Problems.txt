@@ -1,0 +1,13 @@
+Certainly! Here are ten classic recursion problems that are great for practicing recursion:
+
+Factorial Calculation: Write a function to calculate the factorial of a given integer.
+Fibonacci Series: Generate the nth number in the Fibonacci sequence using recursion.
+Binary Search: Implement binary search algorithm using recursion to search for an element in a sorted array.
+Tower of Hanoi: Solve the Tower of Hanoi problem, where you have three pegs and a number of disks of different sizes which can slide onto any peg. The puzzle starts with the disks in a neat stack in ascending order of size on one peg, the smallest at the top, thus making a conical shape.
+Sum of Digits: Write a recursive function to find the sum of digits of a positive integer.
+Binary Tree Traversal: Implement recursive algorithms for inorder, preorder, and postorder traversal of a binary tree.
+Combination Sum: Given an array of integers and a target sum, find all unique combinations in the array where the numbers sum up to the target.
+Palindrome Check: Write a recursive function to check if a given string is a palindrome.
+Subset Generation: Generate all possible subsets of a given set using recursion.
+Permutations: Generate all permutations of a given string using recursion.
+These problems vary in complexity and are excellent for practicing recursion and problem-solving skills. They cover a wide range of concepts and are commonly encountered in coding interviews and competitive programming contests.

@@ -1,0 +1,21 @@
+Inorder Traversal Pseudocode:
+function inorderTraversal(node):
+    if node is not null:
+        inorderTraversal(node.left)
+        // Process node value
+        print node.value
+        inorderTraversal(node.right)
+Preorder Traversal Pseudocode:
+function preorderTraversal(node):
+    if node is not null:
+        // Process node value
+        print node.value
+        preorderTraversal(node.left)
+        preorderTraversal(node.right)
+Postorder Traversal Pseudocode:
+function postorderTraversal(node):
+    if node is not null:
+        postorderTraversal(node.left)
+        postorderTraversal(node.right)
+        // Process node value
+        print node.value

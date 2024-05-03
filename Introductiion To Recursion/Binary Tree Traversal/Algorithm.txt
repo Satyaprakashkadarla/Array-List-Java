@@ -1,0 +1,45 @@
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def inorder_traversal(root):
+    if root:
+        inorder_traversal(root.left)
+        print(root.val)
+        inorder_traversal(root.right)
+
+def preorder_traversal(root):
+    if root:
+        print(root.val)
+        preorder_traversal(root.left)
+        preorder_traversal(root.right)
+
+def postorder_traversal(root):
+    if root:
+        postorder_traversal(root.left)
+        postorder_traversal(root.right)
+        print(root.val)
+
+# Example usage:
+# Constructing a binary tree
+#        1
+#       / \
+#      2   3
+#     / \
+#    4   5
+root = TreeNode(1)
+root.left = TreeNode(2)
+root.right = TreeNode(3)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(5)
+
+print("Inorder traversal:")
+inorder_traversal(root)
+
+print("\nPreorder traversal:")
+preorder_traversal(root)
+
+print("\nPostorder traversal:")
+postorder_traversal(root)

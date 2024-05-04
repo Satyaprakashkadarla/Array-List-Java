@@ -1,0 +1,20 @@
+Count Set Bits (Brian Kernighan’s Algorithm):
+Given a positive integer, count the number of set bits (bits set to 1) in its binary representation.
+Find the Element That Appears Once:
+Given an array where every element occurs three times, except for one element which occurs only once, find the element that appears once.
+Maximum XOR Subarray:
+Given an array of integers, find the maximum XOR subarray value in the array.
+Swap All Odd and Even Bits:
+Given an unsigned integer, swap all odd bits with even bits.
+Check if a Number is Power of 2:
+Given a positive integer, determine whether it is a power of two.
+Find the Missing Number:
+Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+Find the Non-Repeating Element in an Array:
+Given an array where every element occurs twice except for one element, find the element that appears only once.
+Gray Code:
+Generate n-bit Gray Codes, where successive patterns differ by only one bit.
+Count Total Set Bits in All Numbers from 1 to n:
+Given a non-negative integer n, count the total number of set bits in all numbers from 1 to n.
+Divide Two Integers:
+Given two integers, dividend and divisor, divide them without using multiplication, division, and mod operator and return the quotient.

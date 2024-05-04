@@ -1,0 +1,12 @@
+Algorithm power(x, n):
+    Input: x (base), n (exponent)
+    Output: result (x^n)
+
+    if n = 0:
+        return 1
+    else if n is even:
+        temp = power(x, n/2)
+        return temp * temp
+    else:
+        temp = power(x, (n-1)/2)
+        return x * temp * temp

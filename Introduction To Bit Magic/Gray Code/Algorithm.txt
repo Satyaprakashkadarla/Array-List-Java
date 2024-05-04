@@ -1,0 +1,12 @@
+Initialize the Gray Code list with 0 as the first element.
+Loop for i from 1 to 2^n - 1:
+Add (i XOR (i >> 1)) to the Gray Code list.
+def gray_code(n):
+    gray = [0]  # Start with 0 as the first element
+    for i in range(1, 1 << n):  # Iterate from 1 to 2^n - 1
+        gray.append(i ^ (i >> 1))  # Add the XOR result to the list
+    return gray
+
+# Example usage:
+n = 3  # Number of bits
+print("Gray Code for", n, "bits:", gray_code(n))

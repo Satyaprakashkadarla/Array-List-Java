@@ -1,0 +1,13 @@
+function generateGrayCode(n):
+    grayList = []  // Initialize an empty list to store Gray Code values
+    grayList.append(0)  // Start with 0 as the first element
+    
+    // Loop from 1 to 2^n - 1
+    for i = 1 to (2^n - 1):
+        grayList.append(i XOR (i >> 1))  // Append the XOR result to the list
+        
+    return grayList
+
+// Example usage:
+n = 3  // Number of bits
+print("Gray Code for", n, "bits:", generateGrayCode(n))

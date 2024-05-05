@@ -1,0 +1,10 @@
+Maximum Sum Subarray of Size K: Find the subarray of size K with the maximum sum.
+Longest Substring with K Distinct Characters: Find the longest substring with at most K distinct characters.
+Longest Subarray with Ones After Replacement: Given an array containing only 0s and 1s, find the length of the longest subarray with all 1s after replacing at most K 0s.
+Smallest Subarray with a Given Sum: Find the smallest subarray with a sum greater than or equal to a given sum.
+Count of Anagrams in a String: Given a string and a pattern, find the count of occurrences of anagrams of the pattern in the string.
+Longest Subarray with Equal Number of 0s and 1s: Find the longest subarray with an equal number of 0s and 1s.
+Fruits into Baskets: Given an array of characters where each character represents a fruit, you are allowed to pick any number of fruits, but you have to pick the same type of fruit from each basket. Find the length of the longest subarray with at most two distinct fruits.
+Longest Substring Without Repeating Characters: Find the length of the longest substring without repeating characters.
+Minimum Size Subarray Sum: Given an array of positive integers and a target sum, find the minimum length of a contiguous subarray whose sum is greater than or equal to the target sum.
+Maximum Number of Occurrences of a Substring: Given a string and constraints on the number of distinct characters and the total number of occurrences of each character in the substring, find the maximum number of occurrences of any substring satisfying the constraints.

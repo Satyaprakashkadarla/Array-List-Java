@@ -1,0 +1,10 @@
+Finding the Maximum Subarray Sum: Given an array of integers, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+Finding Duplicates in an Array: Given an array of integers, find all the elements that appear more than once in the array.
+Rotating an Array: Given an array, rotate the array to the right by k steps, where k is non-negative.
+Finding Missing Number: Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+Finding the Majority Element: Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊n/2⌋ times.
+Product of Array Except Self: Given an array nums of n integers, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+Finding Peak Element: Given an array of integers nums, find a peak element and return its index. The array may contain multiple peaks, in that case, return the index to any one of the peaks.
+Merge Two Sorted Arrays: Given two sorted arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+Trapping Rain Water: Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+Next Permutation: Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.

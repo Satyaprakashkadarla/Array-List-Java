@@ -1,0 +1,10 @@
+Equilibrium Index: Find the equilibrium index in an array where the sum of elements to the left is equal to the sum of elements to the right.
+Count Equilibrium Indexes: Find the number of equilibrium indexes in an array.
+Maximum Equilibrium Sum: Find the maximum sum of elements for which both sides of the array are balanced.
+Smallest Positive Equilibrium Index: Find the smallest positive equilibrium index in an array.
+Largest Equilibrium Subarray: Find the largest subarray in an array which is an equilibrium array.
+Partition Array into Equilibrium Subarrays: Partition an array into minimum number of subarrays such that each subarray is an equilibrium array.
+Equilibrium Point with Minimum Sum: Find the equilibrium index in an array such that the sum of absolute differences of elements on both sides is minimized.
+Equilibrium Subsequence: Find the longest subsequence in an array which forms an equilibrium array.
+Minimum Insertions to Make Array Equilibrium: Find the minimum number of insertions required to make an array an equilibrium array.
+Equilibrium Pairs: Find all pairs of indices (i, j) in an array such that the sum of elements from index i to index j is equal to the sum of elements from index j+1 to index n-1.

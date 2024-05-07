@@ -1,0 +1,24 @@
+Linear Search:
+Linear search, also known as sequential search, involves iterating through each element in a collection (such as an array) until the target element is found or the end of the collection is reached.
+Time complexity: O(n) in the worst case, where n is the number of elements in the collection.
+Binary Search:
+Binary search requires the collection to be sorted and operates by repeatedly dividing the search interval in half.
+It compares the target value with the middle element of the collection and narrows down the search to the lower or upper half of the collection based on the comparison result.
+Time complexity: O(log n) in the worst case, where n is the number of elements in the collection.
+Requires sorted data, but is significantly faster than linear search for large collections.
+Hashing:
+Hashing involves using a hash function to map keys to values in a data structure called a hash table.
+Hash tables offer constant-time average case performance for insertion, deletion, and search operations, making them very efficient for searching.
+Time complexity: O(1) on average for search operations, assuming a good hash function and minimal collisions.
+Interpolation Search:
+Interpolation search is an improvement over binary search for uniformly distributed data.
+Instead of always dividing the search interval in half, it estimates the position of the target value based on the value range and uses this estimate to narrow down the search.
+Time complexity: O(log log n) on average for uniformly distributed data, but it can degrade to O(n) in the worst case for non-uniform distributions.
+Exponential Search:
+Exponential search is used when the target value may be closer to the beginning of the collection.
+It involves exponentially increasing the search range until a range containing the target value is found, followed by a binary search within that range.
+Time complexity: O(log n) in the worst case, where n is the number of elements in the collection.
+Ternary Search:
+Ternary search is an algorithm for finding the maximum or minimum of a unimodal function.
+It works by dividing the search interval into three equal parts and determining which of the two segments the target lies in.
+Time complexity: O(log3 n), where n is the number of elements in the collection.

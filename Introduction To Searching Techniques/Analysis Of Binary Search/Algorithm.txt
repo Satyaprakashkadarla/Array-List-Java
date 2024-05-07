@@ -1,0 +1,20 @@
+Algorithm: Binary Search
+
+Inputs:
+    - arr: a sorted array of elements
+    - target: the value to search for in the array
+
+Output:
+    - index: the index of the target value in the array, or -1 if not found
+
+Steps:
+1. Set low = 0 and high = length of arr - 1.
+2. While low is less than or equal to high:
+    a. Calculate mid as the average of low and high (mid = (low + high) / 2).
+    b. If arr[mid] is equal to target:
+        i. Return mid as the index of the target value.
+    c. If arr[mid] is less than the target:
+        i. Update low to mid + 1, narrowing the search to the upper half of the array.
+    d. If arr[mid] is greater than the target:
+        i. Update high to mid - 1, narrowing the search to the lower half of the array.
+3. If the target value is not found after the while loop, return -1 to indicate that the target is not in the array.

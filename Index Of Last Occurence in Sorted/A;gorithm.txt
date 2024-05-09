@@ -1,0 +1,10 @@
+Initialize two pointers, left and right, to the start and end of the array respectively.
+Initialize a variable result to store the index of the last occurrence, initially set to -1.
+Repeat the following steps while left is less than or equal to right:
+Calculate the middle index mid using the formula mid = left + (right - left) / 2.
+If the element at index mid is equal to the target element:
+Update result to mid.
+Move left to mid + 1 to search in the right subarray for the last occurrence.
+If the element at index mid is less than the target element, update left to mid + 1.
+If the element at index mid is greater than the target element, update right to mid - 1.
+Return the value of result, which contains the index of the last occurrence of the target element.

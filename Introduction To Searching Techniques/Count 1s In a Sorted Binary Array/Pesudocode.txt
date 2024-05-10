@@ -1,0 +1,17 @@
+Function countOnes(arr):
+    count = 0
+    left = 0
+    right = length(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) / 2
+        if arr[mid] == 1:
+            // Increment count by the number of 1s to the right of mid, including mid
+            count += (right - mid) + 1
+            // Move to the right side of mid to find more 1s
+            left = mid + 1
+        else:
+            // Move to the left side of mid
+            right = mid - 1
+            
+    return count

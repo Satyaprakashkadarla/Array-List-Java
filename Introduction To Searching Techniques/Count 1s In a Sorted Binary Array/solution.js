@@ -1,0 +1,25 @@
+// Function to count occurrences of 1 in a sorted binary array
+function countOnes(arr) {
+    let count = 0;
+    let left = 0;
+    let right = arr.length - 1;
+
+    // Binary search loop
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        // If arr[mid] is 1, increment count and search on the right side
+        if (arr[mid] === 1) {
+            count += (right - mid) + 1;
+            left = mid + 1;
+        } else {
+            // If arr[mid] is 0, search on the left side
+            right = mid - 1;
+        }
+    }
+    return count;
+}
+
+// Example usage:
+const arr = [0, 0, 0, 1, 1, 1, 1];
+const onesCount = countOnes(arr);
+console.log("Number of ones:", onesCount);

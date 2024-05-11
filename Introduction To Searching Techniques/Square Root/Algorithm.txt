@@ -1,0 +1,22 @@
+# Importing the sorting function
+from functools import cmp_to_key
+
+# Custom comparison function to sort by square roots
+def compare_by_sqrt(x, y):
+    sqrt_x = x ** 0.5  # Square root of x
+    sqrt_y = y ** 0.5  # Square root of y
+    
+    if sqrt_x < sqrt_y:
+        return -1
+    elif sqrt_x > sqrt_y:
+        return 1
+    else:
+        return 0
+
+# List of numbers
+numbers = [16, 25, 9, 4, 36]
+
+# Sorting the list by square roots
+numbers_sorted = sorted(numbers, key=cmp_to_key(compare_by_sqrt))
+
+print(numbers_sorted)  # Output: [4, 9, 16, 25, 36]

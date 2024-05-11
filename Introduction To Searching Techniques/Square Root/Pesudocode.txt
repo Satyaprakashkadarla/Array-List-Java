@@ -1,0 +1,15 @@
+function compareBySqrt(a, b):
+    if sqrt(a) < sqrt(b):
+        return -1
+    else if sqrt(a) > sqrt(b):
+        return 1
+    else:
+        return 0
+
+function customSort(arr):
+    n = length of arr
+    
+    for i from 0 to n-2:
+        for j from 0 to n-i-2:
+            if compareBySqrt(arr[j], arr[j+1]) > 0:
+                swap arr[j] and arr[j+1]

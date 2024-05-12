@@ -1,0 +1,15 @@
+Algorithm: InfiniteArraySearch(target, arr)
+Input: target (the value to search for), arr (the infinite-sized array)
+Output: index (the index of the target in the array), or -1 if not found
+
+1. Set start = 0 and end = 1. (Initial range [0, 1])
+2. While the target value is greater than or equal to the value at index end in the array:
+     1. Update start = end and double end.
+3. Perform binary search within the range [start, end]:
+     1. While start is less than or equal to end:
+          1. Calculate mid = (start + end) / 2.
+          2. If arr[mid] is equal to the target value, return mid.
+          3. If arr[mid] is less than the target value, set start = mid + 1.
+          4. Otherwise, set end = mid - 1.
+4. If the target is not found after the binary search, return -1.
+

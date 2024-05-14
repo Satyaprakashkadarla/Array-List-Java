@@ -1,0 +1,14 @@
+function twoSum(nums, target):
+    left = 0
+    right = length(nums) - 1
+    
+    while left < right:
+        sum = nums[left] + nums[right]
+        if sum equals target:
+            return [nums[left], nums[right]] // Found the pair
+        else if sum < target:
+            left = left + 1 // Move left pointer to the right
+        else:
+            right = right - 1 // Move right pointer to the left
+    
+    return [] // No pair found

@@ -1,0 +1,19 @@
+def find_triplet(nums, target):
+    n = len(nums)
+    for i in range(n - 2):
+        left = i + 1
+        right = n - 1
+        while left < right:
+            current_sum = nums[i] + nums[left] + nums[right]
+            if current_sum == target:
+                return [nums[i], nums[left], nums[right]]
+            elif current_sum < target:
+                left += 1
+            else:
+                right -= 1
+    return []
+
+# Example usage:
+nums = [2, 3, 4, 6, 8, 9, 11]
+target = 20
+print(find_triplet(nums, target))  # Output: [3, 8, 9]

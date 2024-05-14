@@ -1,0 +1,14 @@
+function findTriplet(nums, target):
+    n = length(nums)
+    for i = 0 to n - 2:
+        left = i + 1
+        right = n - 1
+        while left < right:
+            currentSum = nums[i] + nums[left] + nums[right]
+            if currentSum equals target:
+                return [nums[i], nums[left], nums[right]] // Found the triplet
+            else if currentSum < target:
+                left = left + 1 // Increment left pointer
+            else:
+                right = right - 1 // Decrement right pointer
+    return [] // No triplet found

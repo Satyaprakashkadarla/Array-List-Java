@@ -1,0 +1,17 @@
+FUNCTION binary_search_last(arr, x):
+    low = 0
+    high = LENGTH(arr) - 1
+    result = -1
+    
+    WHILE low <= high:
+        mid = (low + high) // 2
+        
+        IF arr[mid] == x THEN:
+            result = mid
+            low = mid + 1
+        ELSE IF arr[mid] < x THEN:
+            low = mid + 1
+        ELSE:
+            high = mid - 1
+            
+    RETURN result

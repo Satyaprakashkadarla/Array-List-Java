@@ -1,0 +1,6 @@
+procedure findRepeatingElement(arr, n):
+    for i in 0 to n-1:
+        for j in i+1 to n-1:
+            if arr[i] == arr[j]:
+                return arr[i]
+    return -1

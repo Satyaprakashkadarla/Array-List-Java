@@ -1,0 +1,49 @@
+#include <stdbool.h>
+#include <stdio.h>
+
+bool isPossible(int pages[], int n, int m, int x) {
+    int studentCount = 1;
+    int assignedPages = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (assignedPages + pages[i] > x) {
+            studentCount++;
+            assignedPages = pages[i];
+
+            if (studentCount > m) {
+                return false;
+            }
+        } else {
+            assignedPages += pages[i];
+        }
+    }
+
+    return true;
+}
+
+int main() {
+    int pages[] = {12, 34, 67, 90};
+    int n = sizeof(pages) / sizeof(pages[0]);
+    int m = 2;
+
+    int low = 1;
+    int high = 0;
+
+    for (int i = 0; i < n; i++) {
+        high += pages[i];
+    }
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (isPossible(pages, n, m, mid)) {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+
+    printf("Minimum number of pages = %d\n", low);
+
+    return 0;
+}

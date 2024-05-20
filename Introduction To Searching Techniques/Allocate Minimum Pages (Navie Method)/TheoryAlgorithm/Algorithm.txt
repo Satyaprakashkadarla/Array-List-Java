@@ -1,0 +1,16 @@
+Let N be the number of books and M the number of students.
+
+The minimum value for the maximum number of pages that can be assigned to a student is 1, as each student needs to be assigned at least one book.
+
+The maximum number of pages that can be assigned to a student is equal to the sum of all the pages in the array. This occurs when all the books are assigned to a single student.
+
+Hence, the range of possible values for the maximum number of pages is [1, sum of values in the ‘pages’ array].
+
+To find the minimum number of pages that can be allocated to students, we can use a binary search algorithm. The basic idea is to start with a range of possible values for the minimum number of pages and then use a divide-and-conquer approach to narrow down the range until the minimum number of pages is found.
+
+Here's the algorithm:
+
+Initialize the low and high variables to 1 and the sum of the values in the ‘pages’ array, respectively.
+While the low is less than or equal to the high, perform the following steps: a. Calculate the mid value as the average of the low and high. b. Check if it is possible to allocate the books such that the maximum number of pages assigned to any student is mid. c. If it is possible, set the high to mid - 1. d. If it is not possible, set the low to mid + 1.
+Return the low value as the minimum number of pages that can be allocated to students.
+This algorithm has a time complexity of O(N*log(sum of values in the ‘pages’ array)), where N is the total number of pages in the book.

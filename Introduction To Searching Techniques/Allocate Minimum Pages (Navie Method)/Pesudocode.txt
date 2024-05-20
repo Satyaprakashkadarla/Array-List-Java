@@ -1,0 +1,30 @@
+function allocateMinimumPages(pages, n, m):
+    low = 1
+    high = sum(pages)
+
+    while low <= high:
+        mid = (low + high) / 2
+
+        if isPossible(pages, n, m, mid):
+            high = mid - 1
+        else:
+            low = mid + 1
+
+    return low
+
+function isPossible(pages, n, m, x):
+    studentCount = 1
+    assignedPages = 0
+
+    for i = 0 to n-1:
+        if assignedPages + pages[i] > x:
+            studentCount += 1
+            assignedPages = pages[i]
+
+            if studentCount > m:
+                return false
+
+        else:
+            assignedPages += pages[i]
+
+    return true

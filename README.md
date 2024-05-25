@@ -1,2 +1,2 @@
-Array-List-Java ,Recursions , BitMagic
+Array-List-Java ,Recursions , BitMagic ,
 searching , Sortings

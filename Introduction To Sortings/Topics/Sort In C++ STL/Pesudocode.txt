@@ -1,0 +1,26 @@
+INCLUDE necessary headers:
+    #include <iostream>
+    #include <vector>
+    #include <algorithm>
+
+DEFINE main function:
+    FUNCTION main():
+        DECLARE vector 'numbers' and initialize with elements [5, 2, 9, 1, 5, 6]
+
+        // Step to sort in ascending order
+        CALL sort(numbers.begin(), numbers.end())
+
+        // Step to print sorted elements
+        PRINT "Sorted in ascending order: "
+        FOR each 'num' in 'numbers':
+            PRINT num
+
+        // Step to sort in descending order
+        CALL sort(numbers.begin(), numbers.end(), std::greater<int>())
+
+        // Step to print sorted elements
+        PRINT "Sorted in descending order: "
+        FOR each 'num' in 'numbers':
+            PRINT num
+
+        RETURN 0

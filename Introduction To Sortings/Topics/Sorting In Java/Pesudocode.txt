@@ -1,0 +1,10 @@
+procedure SelectionSort(arr: array of integers)
+    n := length of arr
+    for i := 0 to n-1 do
+        minIndex := i
+        for j := i+1 to n-1 do
+            if arr[j] < arr[minIndex] then
+                minIndex := j
+        swap arr[i] and arr[minIndex]
+    end for
+end procedure

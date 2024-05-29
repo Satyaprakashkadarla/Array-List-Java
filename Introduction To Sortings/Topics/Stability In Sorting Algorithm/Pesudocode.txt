@@ -1,0 +1,33 @@
+MergeSort(array, left, right)
+    if left < right
+        mid = (left + right) / 2
+        MergeSort(array, left, mid)
+        MergeSort(array, mid + 1, right)
+        Merge(array, left, mid, right)
+
+Merge(array, left, mid, right)
+    n1 = mid - left + 1
+    n2 = right - mid
+    LeftArray = new array of size n1
+    RightArray = new array of size n2
+    for i = 0 to n1 - 1
+        LeftArray[i] = array[left + i]
+    for j = 0 to n2 - 1
+        RightArray[j] = array[mid + 1 + j]
+    i = 0, j = 0, k = left
+    while i < n1 and j < n2
+        if LeftArray[i] <= RightArray[j]
+            array[k] = LeftArray[i]
+            i = i + 1
+        else
+            array[k] = RightArray[j]
+            j = j + 1
+        k = k + 1
+    while i < n1
+        array[k] = LeftArray[i]
+        i = i + 1
+        k = k + 1
+    while j < n2
+        array[k] = RightArray[j]
+        j = j + 1
+        k = k + 1

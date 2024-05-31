@@ -1,0 +1,15 @@
+procedure insertionSort(arr: list of sortable items)
+    for i from 1 to length(arr)-1 do
+        key := arr[i]
+        j := i - 1
+
+        // Move elements of arr[0..i-1], that are greater than key, to one position ahead of their current position
+        while j >= 0 and arr[j] > key do
+            arr[j + 1] := arr[j]
+            j := j - 1
+        end while
+
+        // Place key at after the element just smaller than it.
+        arr[j + 1] := key
+    end for
+end procedure

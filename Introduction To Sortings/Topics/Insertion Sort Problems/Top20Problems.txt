@@ -1,0 +1,60 @@
+Sorting Algorithms
+Problem: Implement and compare the performance of various sorting algorithms (Quick Sort, Merge Sort, Heap Sort) on large datasets.
+Topic: Algorithm Design and Analysis
+2. Binary Search Tree Operations
+Problem: Implement a binary search tree (BST) with insert, delete, search, and traversal (in-order, pre-order, post-order) operations.
+Topic: Data Structures
+3. Dynamic Programming - Longest Common Subsequence (LCS)
+Problem: Find the longest common subsequence between two strings.
+Topic: Dynamic Programming
+4. Graph Algorithms - Shortest Path (Dijkstra's Algorithm)
+Problem: Implement Dijkstra's algorithm to find the shortest path in a weighted graph.
+Topic: Graph Algorithms
+5. Graph Algorithms - Minimum Spanning Tree (Kruskal's and Prim's Algorithms)
+Problem: Implement Kruskal's and Prim's algorithms to find the minimum spanning tree of a graph.
+Topic: Graph Algorithms
+6. String Matching - KMP Algorithm
+Problem: Implement the Knuth-Morris-Pratt (KMP) algorithm for string matching.
+Topic: String Algorithms
+7. Backtracking - N-Queens Problem
+Problem: Solve the N-Queens problem using backtracking.
+Topic: Backtracking
+8. Divide and Conquer - Maximum Subarray Problem (Kadane's Algorithm)
+Problem: Find the maximum sum subarray in a given array.
+Topic: Divide and Conquer
+9. Greedy Algorithms - Activity Selection Problem
+Problem: Implement a greedy algorithm to select the maximum number of non-overlapping activities.
+Topic: Greedy Algorithms
+10. Data Structures - Implementing a Hash Table
+Problem: Implement a hash table with open addressing or separate chaining for collision resolution.
+Topic: Data Structures
+11. Dynamic Programming - Knapsack Problem
+Problem: Solve the 0/1 Knapsack problem using dynamic programming.
+Topic: Dynamic Programming
+12. Graph Traversal - Depth-First Search (DFS) and Breadth-First Search (BFS)
+Problem: Implement DFS and BFS algorithms for graph traversal.
+Topic: Graph Algorithms
+13. Concurrency - Producer-Consumer Problem
+Problem: Implement a solution to the producer-consumer problem using semaphores or locks.
+Topic: Concurrency
+14. Advanced Data Structures - Implementing a Trie
+Problem: Implement a trie for efficient string searches and prefix matches.
+Topic: Advanced Data Structures
+15. Bit Manipulation - Counting Set Bits
+Problem: Write a function to count the number of set bits (1s) in an integer.
+Topic: Bit Manipulation
+16. Mathematical Algorithms - Sieve of Eratosthenes
+Problem: Implement the Sieve of Eratosthenes algorithm to find all prime numbers up to a given limit.
+Topic: Mathematical Algorithms
+17. Data Structures - Implementing a Priority Queue (Heap)
+Problem: Implement a priority queue using a binary heap.
+Topic: Data Structures
+18. Dynamic Programming - Edit Distance
+Problem: Compute the edit distance between two strings using dynamic programming.
+Topic: Dynamic Programming
+19. Graph Algorithms - Topological Sorting
+Problem: Implement a topological sort of a directed acyclic graph (DAG).
+Topic: Graph Algorithms
+20. Network Flow - Ford-Fulkerson Algorithm
+Problem: Implement the Ford-Fulkerson algorithm to find the maximum flow in a flow network.
+Topic: Network Flow

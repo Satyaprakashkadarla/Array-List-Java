@@ -1,0 +1,29 @@
+MERGE_SORT(array)
+    IF length(array) > 1
+        mid = length(array) // 2
+        left_half = array[0:mid]
+        right_half = array[mid:length(array)]
+
+        MERGE_SORT(left_half)
+        MERGE_SORT(right_half)
+
+        i = 0, j = 0, k = 0
+
+        WHILE i < length(left_half) AND j < length(right_half)
+            IF left_half[i] < right_half[j]
+                array[k] = left_half[i]
+                i = i + 1
+            ELSE
+                array[k] = right_half[j]
+                j = j + 1
+            k = k + 1
+
+        WHILE i < length(left_half)
+            array[k] = left_half[i]
+            i = i + 1
+            k = k + 1
+
+        WHILE j < length(right_half)
+            array[k] = right_half[j]
+            j = j + 1
+            k = k + 1

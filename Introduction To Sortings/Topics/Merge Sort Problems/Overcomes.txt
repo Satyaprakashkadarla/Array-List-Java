@@ -1,0 +1,11 @@
+Space Complexity: Merge sort requires O(n) extra space for the temporary arrays used in the merging process. This can be a problem for systems with limited memory, especially when dealing with large datasets.
+
+Recursive Overhead: The recursive nature of merge sort can lead to significant overhead due to repeated function calls, which can be problematic for very deep recursion levels, potentially leading to stack overflow errors.
+
+Not In-Place: Unlike some other sorting algorithms (e.g., quicksort), merge sort is not in-place. This means it does not sort the elements within the input array itself but requires additional space for merging.
+
+Performance on Small Arrays: Merge sort may not be the most efficient algorithm for small arrays due to the overhead of recursive calls and merging. In practice, algorithms like insertion sort can be faster for small datasets.
+
+Difficulty in Merging Linked Lists: While merge sort works well with arrays, it can be more challenging to implement for linked lists. However, it can be a good choice for sorting linked lists since it does not require random access to the elements.
+
+Complex Implementation: The implementation of merge sort can be more complex compared to simpler sorting algorithms like bubble sort or insertion sort. Ensuring the correct implementation of the merging process is crucial.

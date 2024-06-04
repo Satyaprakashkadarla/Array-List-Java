@@ -1,0 +1,58 @@
+void mergeSort(int A[], int l, int r) {
+    if (l >= r)
+        return;
+    int mid = l + (r - l) / 2;
+    mergeSort(A, l, mid);
+    mergeSort(A, mid + 1, r);
+    merge(A, l, mid, r);
+}
+
+void merge(int A[], int l, int mid, int r) {
+    int n1 = mid - l + 1;
+    int n2 = r - mid;
+    int X[n1], Y[n2];
+
+    for (int i = 0; i < n1; i++)
+        X[i] = A[l + i];
+    
+    for (int j = 0; j < n2; j++)
+        Y[j] = A[mid + 1 + j];
+
+    int i = 0, j = 0, k = l;
+    while (i < n1 && j < n2) {
+        if (X[i] <= Y[j]) {
+            A[k] = X[i];
+            i = i + 1;
+        } else {
+            A[k] = Y[j];
+            j = j + 1;
+        }
+        k = k + 1;
+    }
+
+    while (i < n1) {
+        A[k] = X[i];
+        i = i + 1;
+        k = k + 1;
+    }
+
+    while (j < n2) {
+        A[k] = Y[j];
+        j = j + 1;
+        k = k + 1;
+    }
+}
+
+void iterativeMergeSort(int A[], int n) {
+    int windowSize;
+    int left;
+
+    for (windowSize = 1; windowSize < n; windowSize = 2 * windowSize) {
+        for (left = 0; left < n - 1; left = left + 2 * windowSize) {
+            int mid = min(left + windowSize - 1, n - 1);
+            int right = min(left + 2 * windowSize - 1, n - 1);
+
+            merge(A, left, mid, right);
+        }
+    }
+}

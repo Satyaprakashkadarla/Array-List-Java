@@ -1,9 +1,0 @@
-Pseudocode: Max & Min 
-
-max = array[0]
-for each element in array {
-    if element > max {
-        max = element
-    }
-}
-return max

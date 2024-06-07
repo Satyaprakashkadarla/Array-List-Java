@@ -1,8 +1,0 @@
-Finding the maximum element in an array:
-
-Algorithm:
-1.Initialize a variable max to store the maximum value found so far.
-2.Iterate through the array elements.
-3.Compare each element with the current maximum value (max).
-4.If an element is greater than max, update max with that element.
-After iterating through all elements, max will contain the maximum 5.value.
